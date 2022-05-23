@@ -179,12 +179,15 @@ hr {
 /* ------ Carousel ------ */
 
 main {
+    display: flex;
+    justify-content: center;
     margin: 0 7rem;
 }
 
 .grid{
     display: grid;
     grid-template-columns: 50% 50%;
+    max-width: 1370px;
     grid-template-rows: auto auto;
     grid-template-areas: "carousel carousel" "foto1 foto2";
 }
@@ -192,9 +195,10 @@ main {
 .carousel {
     display: flex;
     grid-area: carousel;
-    margin: 0 0 1rem 0;
+    margin: -3.5rem 0 1rem 0;
     padding: 0 0;
-    max-width: 100rem;
+    max-width: 1370px;
+    max-height: 460px;
     justify-self: center;
 }
 
@@ -227,13 +231,19 @@ main {
 */
 
 .foto1 {
+    max-width: 685px;
     display: flex;
     grid-area: foto1;
     justify-content: left;
 }
 
 .foto2 {
+    max-width: 685px;
     display: flex;
     grid-area: foto2;
     justify-content: right;
+}
+
+.img{
+    width: 677px;
 }
