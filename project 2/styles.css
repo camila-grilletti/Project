@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
-/*Poner align-items en el buscador, los pone en el centro verticalmente*/
 /* ------ Colores ------ */
 
 :root {
@@ -10,6 +9,7 @@
     --text-color-1: hsl(0, 0%, 0%);
     --text-color-2: rgb(53, 168, 53);
     --font-2: "Poppins", sans-serif;
+    --text-color-3: hsl(184, 11%, 26%);
 }
 
 /* ------ General ------ */
@@ -37,34 +37,50 @@ body {
 }
 
 .ul {
-    align-items: flex-start;
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
+    list-style: none;  
+}
+
+.btn-wsp {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    bottom: 40px;
+    right: 20px;
+    border-radius: 50px;
+    color: white;
+    background: #0df053;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.btn-wsp:hover {
+    text-decoration: none;
+    color: white;
+    background: #0df053;
 }
 
 /* ------ Código CSS reutilizable ------ */
 
 
 .container {
-    justify-content:left;
+    justify-content: center;
     display: grid;
     grid-template-columns: repeat(6, max-content);
     position: relative;
-    padding: 0 4rem;
-    margin: 0 auto;
+    width: 1370px;
 }
 
 
 /* ------ Navbar ------ */
 
 header {
+    /*Fijarse si modificando esto se ordena el grid*/
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 100;
 }
 
@@ -83,7 +99,7 @@ header {
 .links ul {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 100%; 
 }
 
 .nav_link {
@@ -159,12 +175,6 @@ header {
 
 /* ------ Próximamente: Quilombo de líneas :D ------ */
 
-hr {
-    position: absolute;
-    display: flex;
-    width: 72rem;
-}
-
 .hr1 {
     margin-top: 10%;
     position: static;
@@ -174,20 +184,22 @@ hr {
 
 .hr2 {
     position: static;
+    width: 1370px;
+    size: 5px;
 }
 
 /* ------ Carousel ------ */
 
 main {
-    display: flex;
+    display: grid;
     justify-content: center;
-    margin: 0 7rem;
+    margin: 0 7rem; 
 }
 
 .grid{
     display: grid;
     grid-template-columns: 50% 50%;
-    max-width: 1370px;
+    width: 1370px;
     grid-template-rows: auto auto;
     grid-template-areas: "carousel carousel" "foto1 foto2";
 }
@@ -202,33 +214,7 @@ main {
     justify-self: center;
 }
 
-/*
-.colitojrjr{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.carousel {
-    display: grid;
-    grid-template-columns: 72rem;
-    margin: -3.5rem 7rem 0 7rem;
-    z-index: 10;
-}
-*/
-
 /* ------ Fijos (se llama así xq no sé qué nombre ponerle) ------ */
-/*
-.container2 {
-    position: static;
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    max-width: 100%;
-    padding: 0rem;
-    margin: -0rem 5%;
-}
-*/
 
 .foto1 {
     max-width: 685px;
@@ -246,4 +232,104 @@ main {
 
 .img{
     width: 677px;
+}
+
+/* ------ Productos ------ */
+
+.recomendados-hr {
+    border: 0; 
+    height: 10px; 
+    border-top: 4px rgb(241, 50, 50); 
+    border-color: #00FF00;
+    margin-bottom: -5px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto auto auto;
+}
+
+.producto {
+    margin: 30px 10px 0 10px;
+}
+
+.producto-img {
+    display: block;
+    margin: 0px auto;
+    width: 150px;
+}
+
+.producto-titulo {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--text-color-3);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.producto-autor {
+    margin: 20px 0 40px 0;
+    text-align: center;
+    color: var(--text-color-3);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.producto-hr {
+    margin-top: -25px;
+    color: rgb(255, 0, 0);
+    border-radius: 20px;    
+}
+
+.producto-price {
+    margin-top: -5px;
+    color: var(--text-color-3);
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#btn-vermas {
+    display: flex;
+    margin: 0 auto;
+    font-size: 2rem;
+    letter-spacing: .5px;
+    color: var(--text-color-1);
+    background-color: var(--button);
+    border-radius: 150px;
+    padding: 0.5rem 1.7rem 0.5rem 1.7rem;
+    transition: 0.3s;
+    font-family: var(--font-2);
+    font-size: 1.2rem;
+    color: white;
+    width: fit-content;
+}
+
+
+/* ------ Newsletter ------ */
+
+.newsletter-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "img titulo input boton";
+}
+
+.decoration {
+    border-top-color: #CC0000;
+    border-right-color: blue;
+    border-bottom-color: #00FF00;
+    border-left-color: #CCC;
+}
+
+.newsletter-img {
+    grid-area: img;
+    display: block;
+    margin: 0px auto;
+    width: 150px;
+}
+
+.newsletter-title {
+    grid-area: titulo;
 }
