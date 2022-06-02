@@ -28,6 +28,10 @@ body {
     margin: 50px;
 }
 
+footer {
+    background-color: rgb(239, 238, 238);
+}
+
 ::selection {
     background-color: hsla(120, 100%, 50%, 0.9);
     color: black;
@@ -236,12 +240,10 @@ main {
 
 /* ------ Productos ------ */
 
-.recomendados-hr {
-    border: 0; 
-    height: 10px; 
-    border-top: 4px rgb(241, 50, 50); 
-    border-color: #00FF00;
+.recomendados-hr { 
     margin-bottom: -5px;
+    border: 2px solid black;
+    border-radius: 20px;
 }
 
 .productos-grid {
@@ -278,7 +280,7 @@ main {
 
 .producto-hr {
     margin-top: -25px;
-    color: rgb(255, 0, 0);
+    color: black;
     border-radius: 20px;    
 }
 
@@ -306,8 +308,15 @@ main {
     width: fit-content;
 }
 
+.margen-btn {
+    margin-top: 30px;
+}
 
 /* ------ Newsletter ------ */
+
+.newsletter {
+    margin-top: 3rem;
+}
 
 .newsletter-grid {
     display: grid;
@@ -362,4 +371,59 @@ main {
 .newsletter-btn {
     grid-area: boton;
     height: fit-content;
+}
+
+/* ------ Pie de página ------ */
+
+.footer {
+    margin: 0 75px;
+}
+
+.pie-grid {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: auto;
+    grid-template-areas: "contacto leclub seguinos";
+    grid-column-gap: 60px;
+}
+
+.contacto {
+    grid-area: contacto;
+    font-size: 20px;
+}
+
+.leclub {
+    grid-area: leclub;
+    font-size: 20px;
+}
+
+.seguinos {
+    grid-area: seguinos;
+    font-size: 20px;
+}
+
+.title-footer {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.hr-footer {
+    border: 1px dashed;
+    border-radius: 20px;
+}
+
+.aa {
+    color: #3b4849;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;   
+}
+
+.img-footer {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
 }
