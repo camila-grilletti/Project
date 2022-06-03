@@ -198,17 +198,11 @@ main {
     justify-content: center;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto;
-    grid-column-gap: 20px;
-}
 
 .carousel {
     display: flex;
     margin: -3.5rem 0 1rem 0;
-    max-width: 1500px;
+    max-width: 1510px;
     max-height: 460px;
 }
 
@@ -216,14 +210,28 @@ main {
 
 .grid{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-column-gap: 20px;
 }
 
-.img{
-    width: 627px;
+/*.img{
+    width: max-content;
     height: 300px; 
+}*/
+
+.foto1{
+    background-image: url(./images/NOVEDADES\ EDITORIALES.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+}
+
+.foto2{
+    background-image: url(./images/ULTIMOS\ LANZAMIENTOS.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
 }
 
 /* ------ Productos ------ */
