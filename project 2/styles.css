@@ -22,10 +22,9 @@
 }
 
 body {
-    overflow-x: hidden;
     background-color: var(--bg-color);
     font-family: "DM Sans", sans-serif;
-    margin: 50px;
+    padding: 0 7rem;
 }
 
 footer {
@@ -197,45 +196,34 @@ header {
 main {
     display: grid;
     justify-content: center;
-    margin: 0 7rem; 
 }
 
 .grid{
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 1370px;
     grid-template-rows: auto auto;
-    grid-template-areas: "carousel carousel" "foto1 foto2";
+    grid-column-gap: 20px;
 }
 
 .carousel {
     display: flex;
-    grid-area: carousel;
     margin: -3.5rem 0 1rem 0;
-    padding: 0 0;
-    max-width: 1370px;
+    max-width: 1500px;
     max-height: 460px;
-    justify-self: center;
 }
 
 /* ------ Fijos (se llama así xq no sé qué nombre ponerle) ------ */
 
-.foto1 {
-    max-width: 685px;
-    display: flex;
-    grid-area: foto1;
-    justify-content: left;
-}
-
-.foto2 {
-    max-width: 685px;
-    display: flex;
-    grid-area: foto2;
-    justify-content: right;
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
 }
 
 .img{
-    width: 677px;
+    width: 627px;
+    height: 300px; 
 }
 
 /* ------ Productos ------ */
