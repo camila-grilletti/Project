@@ -27,10 +27,6 @@ body {
     padding: 0 7rem;
 }
 
-footer {
-    background-color: rgb(239, 238, 238);
-}
-
 ::selection {
     background-color: hsla(120, 100%, 50%, 0.9);
     color: black;
@@ -66,8 +62,7 @@ footer {
     background: #0df053;
 }
 
-/* ------ Código CSS reutilizable ------ */
-
+/* ------ Navbar ------ */
 
 .container {
     justify-content: center;
@@ -76,9 +71,6 @@ footer {
     position: relative;
     width: 1370px;
 }
-
-
-/* ------ Navbar ------ */
 
 header {
     /*Fijarse si modificando esto se ordena el grid*/
@@ -146,13 +138,13 @@ header {
 }
 
 .search input {
-        width: 300px;
-        height: 40px;
-        padding: 0 20px;
-        font-size: 18px;
-        outline: none;
-        border: 2px solid silver;
-        border-radius: 30px;
+    width: 300px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    outline: none;
+    border: 2px solid silver;
+    border-radius: 30px;
 }
 
 .fa-magnifying-glass {
@@ -371,10 +363,6 @@ main {
 
 /* ------ Pie de página ------ */
 
-.footer {
-    margin: 0 75px;
-}
-
 .pie-grid {
     display: grid;
     grid-template-columns: 40% 20% 40%;
@@ -396,6 +384,7 @@ main {
 .seguinos {
     grid-area: seguinos;
     font-size: 20px;
+    display:block;
 }
 
 .title-footer {
@@ -412,14 +401,12 @@ main {
     color: #3b4849;
 }
 
-.social-grid {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto;   
-}
-
 .img-footer {
     width: 100px;
     height: 100px;
     border-radius: 20px;
+}
+
+@media (max-width: 768px){
+    
 }
