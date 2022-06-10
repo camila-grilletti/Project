@@ -64,16 +64,15 @@ body {
 
 /* ------ Navbar ------ */
 
-.container {
+.contenedor {
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(6, max-content);
+    grid-template-columns: repeat(6, fit-content);
     position: relative;
-    width: 1370px;
+    width: 100%;
 }
 
 header {
-    /*Fijarse si modificando esto se ordena el grid*/
     position: relative;
     top: 0;
     left: 0;
@@ -102,7 +101,7 @@ header {
     position: relative;
     display: inline-block;
     margin: 0 1rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #3b4849;
     transition: 0.3s;
 }
@@ -173,8 +172,9 @@ header {
 .hr1 {
     margin-top: 10%;
     position: static;
-    margin-left: -52rem;
+    margin-left: -48.6rem;
     width: 56rem;
+    border-radius: 20px;
 }
 
 .hr2 {
@@ -207,17 +207,11 @@ main {
     grid-column-gap: 20px;
 }
 
-/*.img{
-    width: max-content;
-    height: 300px; 
-}*/
-
 .foto1{
     background-image: url(./images/NOVEDADES\ EDITORIALES.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 320px;
-
 }
 
 .foto2{
@@ -231,13 +225,13 @@ main {
 
 .recomendados-hr { 
     margin-bottom: -5px;
-    border: 2px solid black;
+    border: 1.5px solid black;
     border-radius: 20px;
 }
 
 .productos-grid {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
     grid-template-rows: auto auto auto;
 }
 
@@ -248,14 +242,14 @@ main {
 .producto-img {
     display: block;
     margin: 0px auto;
-    width: 150px;
+    width: 140px;
 }
 
 .producto-titulo {
     margin-top: 10px;
     text-align: center;
     color: var(--text-color-3);
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 600;
 }
 
@@ -263,7 +257,7 @@ main {
     margin: 20px 0 40px 0;
     text-align: center;
     color: var(--text-color-3);
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 400;
 }
 
@@ -276,7 +270,7 @@ main {
 .producto-price {
     margin-top: -5px;
     color: var(--text-color-3);
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 600;
     text-align: center;
 }
@@ -305,6 +299,7 @@ main {
 
 .newsletter {
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .newsletter-grid {
@@ -348,6 +343,7 @@ main {
 }
 
 .input-email {
+    margin-bottom: 10px;
     width: 400px;
     height: 40px;
     padding: 0 20px;
