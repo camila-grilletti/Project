@@ -194,8 +194,8 @@ main {
 .carousel {
     display: flex;
     margin: -3.5rem 0 1rem 0;
-    max-width: 1510px;
-    max-height: 460px;
+    max-width: 1fr;
+    max-height: 1fr;
 }
 
 /* ------ Fijos (se llama así xq no sé qué nombre ponerle) ------ */
@@ -217,6 +217,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     height: 320px;
+
 }
 
 .foto2{
@@ -407,6 +408,15 @@ main {
     border-radius: 20px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 1440px){
+    .foto1{
+        height: 300px;
+        width: 650px;
+    }
     
+    .foto2{
+        height: 300px;
+        width: 650px;
+    }
+
 }
