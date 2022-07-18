@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Club</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="desplegable" id="desplegable">
+            <div class="x" id="x"><a href="javascript:cerrar()"><i class="fa-solid fa-xmark"></i></a></div>
+            <ul class="list">
+                <br>
+                <li class="list__item">
+                    <a href="/index.html">Inicio</a>
+                </li>
+                <hr noshade="" class="desplegable__hr">
+                <li class="list__item">
+                    <a href="#">Libros</a>
+                </li>
+                <li class="list__item">
+                    <a href="#">Música</a>
+                </li>
+                <hr noshade="" class="desplegable__hr">
+                <li class="list__item">
+                    <a href="#">Sobre Nosotros</a>
+                </li>
+                <li class="list__item">
+                    <a href="#">Políticas de Privacidad</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container logo-nav-container">
+            <div class="logo"></div>
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <div class="bars" id="bars"><a href="javascript:abrir()"><i class="fa-solid fa-bars"></i></a></div>
+                    </li>
+                    <li>
+                        <div class="menu"><a href="#">Libros</a></div>
+                    </li>
+                    <li>
+                        <div class="menu"><a href="#">Música</a></div>
+                    </li>
+                    <li>
+                        <div class="glass" id="glass"><a href="javascript: abrirBuscar()"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li>
+                        <div class="buscarmobile">
+                            <div class="buscarmobile__arrow"><a href="javascript: cerrarBuscar()"><i class="fa-solid fa-arrow-left"></i></a></div>
+                            <input class="buscarmobile__input" type="text" placeholder="Buscar..." required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="search"><input class="input" type="text" placeholder="Buscar..." required></div>
+                    </li>
+                    <li>
+                        <div class="ingresar"><a href="#" class="button">Ingresar</a></div>
+                    </li>
+                    <li>
+                        <div class="cart" id="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="body">
+        <div class="container conteiner__slider">
+            <div class="slider" id="slider">
+                <div class="slider__section">
+                    <img src="assets/media/slide1.jpg" alt="Imagen 1" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="assets/media/slide2.jpg" alt="Imagen 2" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="assets/media/slide3.jpg" alt="Imagen 3" class="slider__img">
+                </div>
+            </div>
+            <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+            <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+            <hr>
+        </div>
+    </section>
+
+    <section id="novlan">
+        <div class="container">
+            <div class="novlan">
+                <ul>
+                    <li><img src="/assets/media/NOVEDADES EDITORIALES.png" alt="Slide 1" class="img-novlan"></li>
+                    <li><img src="/assets/media/ULTIMOS LANZAMIENTOS.png" alt="Slide 2" class="img-novlan"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="recomendadas">
+        <div class="container">
+            <br>
+            <h1>Lecturas recomendadas</h1>
+            <hr><hr>
+            <div class="publicaciones">
+                <div class="publicacion">
+                    <img src="/assets/media/libro1.png" alt="Libro 1" class="publicacion__img">
+                    <h4>Matar un reino</h4>
+                    <h5>Alexandra Christo</h5>
+                    <hr>
+                    <h3>$ 2800</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="/assets/media/libro2.jpg" alt="Libro 2" class="publicacion__img">
+                    <h4>Boulevard</h4>
+                    <h5>Flor M. Salvador</h5>
+                    <hr>
+                    <h3>$ 2740</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="/assets/media/libro1.png" alt="Libro 3" class="publicacion__img">
+                    <h4>Matar un reino</h4>
+                    <h5>Alexandra Christo</h5>
+                    <hr>
+                    <h3>$ 2800</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="/assets/media/libro2.jpg" alt="Libro 4" class="publicacion__img">
+                    <h4>Boulevard</h4>
+                    <h5>Flor M. Salvador</h5>
+                    <hr>
+                    <h3>$ 2740</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="/assets/media/libro1.png" alt="Libro 5" class="publicacion__img">
+                    <h4>Matar un reino</h4>
+                    <h5>Alexandra Christo</h5>
+                    <hr>
+                    <h3>$ 2800</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="/assets/media/libro2.jpg" alt="Libro 6" class="publicacion__img">
+                    <h4>Boulevard</h4>
+                    <h5>Flor M. Salvador</h5>
+                    <hr>
+                    <h3>$ 2740</h3>
+                </div>
+            </div>
+            <div class="vermas">
+                <button class="button">Ver más</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="destacados">
+        <div class="container">
+            <h1>Nuestros destacados</h1>
+            <hr>
+            <hr>
+            <div class="publicaciones2">
+                <div class="publicacion">
+                    <img src="/assets/media/cd1.jpg" alt="CD 1" class="publicacion__img">
+                    <h4>1</h4>
+                    <h5>The Beatles</h5>
+                    <hr>
+                    <h3>$ 10000</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="/assets/media/cd2.jpg" alt="CD 2" class="publicacion__img">
+                    <h4>Blue & Lonesome</h4>
+                    <h5>The Rolling Stones</h5>
+                    <hr>
+                    <h3>$ 9760</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="/assets/media/cd1.jpg" alt="CD 3" class="publicacion__img">
+                    <h4>1</h4>
+                    <h5>The Beatles</h5>
+                    <hr>
+                    <h3>$ 10000</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="/assets/media/cd2.jpg" alt="CD 4" class="publicacion__img">
+                    <h4>Blue & Lonesome</h4>
+                    <h5>The Rolling Stones</h5>
+                    <hr>
+                    <h3>$ 9760</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="/assets/media/cd1.jpg" alt="CD 5" class="publicacion__img">
+                    <h4>1</h4>
+                    <h5>The Beatles</h5>
+                    <hr>
+                    <h3>$ 10000</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="/assets/media/cd2.jpg" alt="CD 6" class="publicacion__img">
+                    <h4>Blue & Lonesome</h4>
+                    <h5>The Rolling Stones</h5>
+                    <hr>
+                    <h3>$ 9760</h3>
+                </div>
+            </div>
+            <div class="vermas" style="margin-top: 2em;">
+                <button class="button">Ver más</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="container">
+            <div class="newsletter">
+                <div class="recuadro">
+                    <div class="newsletter__block">
+                        <img src="/assets/media/megaphone.png" alt="Megáfono" class="newsletter__block--img">
+                        <h2>Newsletter de<br>novedadades</h2>
+                    </div>
+                    <div class="newsletter__email">
+                        <input type="text" placeholder="Ingresá tu email" required class="input newsletter__email--input">
+                        <div class="newsletter__email--checkbox">
+                            <input type="checkbox" name="" id="">Acepto las <a href="#" type="blank">políticas de
+                                privacidad</a> y a
+                            recibir novedadades por email.
+                        </div>
+                    </div>
+                    <div class="button" style="margin-top: 1em;">
+                        <button class="button">Suscribirme</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <br>
+                <div class="footer__contacto">
+                    <h2>Contacto</h2>
+                    <hr>
+                    <hr>
+                    <p>Le Club<br>San Martín 950 (5500)<br>Mendoza, Argentina<br>Teléfono: <a
+                            href="tel:+54 261 574 1747">+54 261 574 1747</a><br>Email: <a
+                            href="mailto:ventas@leclublibrosymusica.com">ventas@leclublibrosymusica.com</a></p>
+                </div>
+                <div class="seguinos">
+                    <h2>Seguinos</h2>
+                    <hr>
+                    <hr>
+                    <div class="footer__redes">
+                        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><img
+                                src="/assets/media/instagram.png" alt="Instagram" class="footer__redes--img"></a>
+                        <img src="/assets/media/facebook.png" alt="Facebook" class="footer__redes--img">
+                        <img src="/assets/media/twitter.png" alt="Twitter" class="footer__redes--img">
+                    </div>
+                </div>
+                <div class="footer__leclub">
+                    <h2>Le Club</h2>
+                    <hr>
+                    <hr>
+                    <a href="#" target="_blank">Sobre Nosotros</a><br>
+                    <a href="#" target="_blank">Políticas de Privacidad</a>
+                </div>
+                <div class="footer__tarjetas">
+                    <img src="/assets/media/tarjetas.gif" alt="Tarjetas aceptadas" class="footer__tarjetas--img">
+                </div>
+                <hr>
+                <div class="copyright">
+                    <p style="font-size: 10px;">Copyright © 2022 Le Club ®</p><br>
+                </div>
+            </div>
+    </footer>
+    <script src="/assets/js/slider-frame.js"></script>
+    <script src="/assets/js/publicaciones.js"></script>
+    <script src="/assets/js/menu-desplegable.js"></script>
+</body>
+
+</html>
