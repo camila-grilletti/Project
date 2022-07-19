@@ -39,7 +39,7 @@
 
     <header class="header">
         <div class="container logo-nav-container">
-            <div class="logo"></div>
+            <div style="z-index: 100;" id="logo"><img src="assets/media/logo.png" alt="" class="logo"></div>
             <nav class="navigation">
                 <ul>
                     <li>
@@ -174,7 +174,7 @@
                 </div>
                 <div class="publicacion">
                     <img src="assets/media/cd2.jpg" alt="CD 2" class="publicacion__img">
-                    <h4>Blue & Lonesome</h4>
+                    <h4>Blue & Lonesome y la vanda de otros </h4>
                     <h5>The Rolling Stones</h5>
                     <hr>
                     <h3>$ 9760</h3>
@@ -218,20 +218,22 @@
         <div class="container">
             <div class="newsletter">
                 <div class="recuadro">
-                    <div class="newsletter__block">
-                        <img src="assets/media/megaphone.png" alt="Megáfono" class="newsletter__block--img">
-                        <h2>Newsletter de<br>novedadades</h2>
-                    </div>
-                    <div class="newsletter__email">
-                        <input type="text" placeholder="Ingresá tu email" required class="input newsletter__email--input">
-                        <div class="newsletter__email--checkbox">
-                            <input type="checkbox" name="" id="">Acepto las <a href="#" type="blank">políticas de
-                                privacidad</a> y a
-                            recibir novedadades por email.
+                    <div class="newsletter_container">
+                        <div class="newsletter__block">
+                            <img src="assets/media/megaphone.png" alt="Megáfono" class="newsletter__block--img">
+                            <h2>Newsletter de<br>novedadades</h2>
                         </div>
-                    </div>
-                    <div class="button" style="margin-top: 1em;">
-                        <button class="button">Suscribirme</button>
+                        <div class="newsletter__email">
+                            <input type="text" placeholder="Ingresá tu email" required class="input">
+                            <div class="newsletter__email--checkbox">
+                                <input type="checkbox" name="" id="">Acepto las <a href="#" type="blank">políticas de
+                                    privacidad</a> y a
+                                recibir novedadades por email.
+                            </div>
+                        </div>
+                        <div class="button" style="margin-top: 1em;">
+                            <button class="button">Suscribirme</button>
+                        </div>
                     </div>
                 </div>
             </div>

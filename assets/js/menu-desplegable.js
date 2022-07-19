@@ -17,6 +17,11 @@ function abrirBuscar () {
     document.getElementById("cart").style.display = "none";
     document.getElementById("glass").style.display = "none";
     document.getElementById("bars").style.display = "none";
+    if (screen.width < 500) {
+        document.getElementById("logo").style.display = "none";
+    } else {
+        document.getElementById("logo").style.display = "";
+    }
 }
 
 function cerrarBuscar () {
@@ -24,4 +29,7 @@ function cerrarBuscar () {
     document.getElementById("cart").style.display = "";
     document.getElementById("glass").style.display = "";
     document.getElementById("bars").style.display = "";
+    if (screen.width < 500) {
+        document.getElementById("logo").style.display = "";
+    }
 }
