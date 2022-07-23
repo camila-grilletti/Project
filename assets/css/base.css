@@ -6,10 +6,15 @@
     --bg-color-2: hsl(87, 100%, 67%);
     --bg-color-3: hsl(120, 100%, 50%);
     --bg-color-4: hsl(87, 96%, 59%);
+    --bg-color-5: hsl(0, 0%, 93%);
+    --bg-color-6: hsl(120, 77%, 44%);
+    --bg-color-7: hsl(113, 32%, 89%);
     --button: hsl(87, 54%, 51%);
     --text-color-1: hsl(0, 0%, 0%);
     --text-color-2: rgb(53, 168, 53);
     --text-color-3: hsl(0, 0%, 12%);
+    --text-color-4: rgb(27, 106, 27);
+    --text-color-5: hsl(120, 76%, 35%);
     --font-2: "Poppins", sans-serif;
 }
 
@@ -191,6 +196,7 @@ button {
     right: 0;
     display: none;
     z-index: 150;
+    backdrop-filter: blur(5px);
 }
 
 .fa-xmark {

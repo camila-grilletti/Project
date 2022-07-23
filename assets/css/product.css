@@ -187,17 +187,6 @@ button {
     transition: .2s ease all;
 }
 
-.overlay {
-    background-color: rgba(0, 0, 0, 40%);
-    top: 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
-    z-index: 150;
-}
-
 .fa-xmark {
     margin-top: .8em;
     margin-left: .5em;
@@ -471,6 +460,7 @@ button {
 
 .emergente-overlay {
     background-color: rgba(0, 0, 0, 40%);
+    backdrop-filter: blur(5px);
     top: 0;
     position: fixed;
     bottom: 0;
