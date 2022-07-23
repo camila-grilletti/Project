@@ -26,6 +26,20 @@ function enableScroll(){
 
 ///////////////////////////////////
 
+function abrirModal() {
+    document.getElementById("overlay-filtros").style.display = "flex";
+    document.getElementById("modal").style.display = "flex";
+    disableScroll();
+}
+
+function cerrarModal() {
+    document.getElementById("overlay-filtros").style.display = "none";
+    document.getElementById("modal").style.display = "none";
+    enableScroll();
+}
+
+///////////////////////////////////
+
 function abrir() {
     desplegable.style.display="flex";
     overlay.style.display="flex";
