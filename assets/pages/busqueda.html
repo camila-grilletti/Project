@@ -89,6 +89,41 @@
             <div class="filtro">
                 <div class="filtro__filtrar">
                     <a href="javascript: abrirModal()"><button class="button-filtrar" id="btn-filtrar"><div>Filtrar</div><i class="fa-solid fa-filter"></i></button></a>
+                    <div class="ocultar" id="ocultar">   
+                        <div class="filtros">
+                            <ul class="filtros-list">
+                                <div class="x-cerrar"><a href="javascript:cerrarModal()"><i class="fa-solid fa-xmark"></i></a></div>
+                                <h3>Filtrar por: </h3>
+                                <li class="filtros-list-item filtros-list-item-click">
+                                    <div class="filtros-list-button list-button-click">
+                                        <a href="#" class="filtros-list-link">Libros</a>
+                                        <div class="filtros-list-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                                    </div>
+                                    <ul class="list-show">
+                                        <li class="list-inside">Cómics</li>
+                                        <li class="list-inside">Crecimiento Personal</li>
+                                        <li class="list-inside">Divulgación general</li>
+                                        <li class="list-inside">Ficción</li>
+                                        <li class="list-inside">Juvenil</li>
+                                        <li class="list-inside">Infantil</li>
+                                        <li class="list-inside">No ficción</li>
+                                    </ul>
+                                </li>
+                                <li class="filtros-list-item filtros-list-item-click">
+                                    <div class="filtros-list-button list-button-click">
+                                        <a href="#" class="filtros-list-link">Música</a>
+                                        <div class="filtros-list-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                                    </div>
+                                    <ul class="list-show">
+                                        <li class="list-inside">Rock</li>
+                                        <li class="list-inside">Pop</li>
+                                        <li class="list-inside">Folclore</li>
+                                        <li class="list-inside">Clásica</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="filtro__ordenar">
                     <a href=""><button class="button-filtrar"><div>Ordenar</div><i class="fa-solid fa-arrow-down-short-wide"></i></button></a>
@@ -97,7 +132,7 @@
         </div>
     </section>
 
-    <div class="overlay-filtros" id="overlay-filtros">
+    <div class="overlay-filtros ocultar-filtros" id="overlay-filtros">
         <section id="filtros">
             <div class="container">
                 <div class="modal" id="modal">
@@ -145,7 +180,9 @@
         <div class="container">
             <div class="productos">
                 <div class="productos__producto">
-                    <img src="/Project/assets/media/libro1.png" alt="Matar un reino" class="productos__producto--img">
+                    <div class="img-producto">
+                        <img src="/Project/assets/media/libro1.png" alt="Matar un reino" class="productos__producto--img">
+                    </div>
                     <div class="productos__producto--info">
                         <h4>Matar un reino</h4>
                         <h5>Alexandra Christo</h5>
@@ -153,7 +190,9 @@
                     </div>
                 </div>
                 <div class="productos__producto">
-                    <img src="/Project/assets/media/rayuela-libro.png" alt="Rayuela" class="productos__producto--img">
+                    <div class="img-producto">
+                        <img src="/Project/assets/media/rayuela-libro.png" alt="Rayuela" class="productos__producto--img">
+                    </div>
                     <div class="productos__producto--info">
                         <h4>Rayuela</h4>
                         <h5>Julio Cortázar</h5>
@@ -161,7 +200,9 @@
                     </div>
                 </div>
                 <div class="productos__producto">
-                    <img src="/Project/assets/media/asesinato-libro.jpg" alt="Asesinato en el Orient Express" class="productos__producto--img">
+                    <div class="img-producto">
+                        <img src="/Project/assets/media/asesinato-libro.jpg" alt="Asesinato en el Orient Express" class="productos__producto--img">
+                    </div>
                     <div class="productos__producto--info">
                         <h4>Asesinato en el Orient Express</h4>
                         <h5>Agatha Christie</h5>
@@ -169,7 +210,9 @@
                     </div>
                 </div>
                 <div class="productos__producto">
-                    <img src="/Project/assets/media/ickabog-libro.jpg" alt="El Ickabog" class="productos__producto--img">
+                    <div class="img-producto">
+                        <img src="/Project/assets/media/ickabog-libro.jpg" alt="El Ickabog" class="productos__producto--img">
+                    </div>
                     <div class="productos__producto--info">
                         <h4>El Ickabog</h4>
                         <h5>J. K. Rowling</h5>
@@ -177,7 +220,9 @@
                     </div>
                 </div>
                 <div class="productos__producto">
-                    <img src="/Project/assets/media/filosofal-libro.webp" alt="Harry Potter y la piedra filosofal" class="productos__producto--img">
+                    <div class="img-producto">
+                        <img src="/Project/assets/media/filosofal-libro.webp" alt="Harry Potter y la piedra filosofal" class="productos__producto--img">                        
+                    </div>
                     <div class="productos__producto--info">
                         <h4>Harry Potter y la piedra filosofal</h4>
                         <h5>J. K. Rowling</h5>
@@ -185,7 +230,9 @@
                     </div>
                 </div>
                 <div class="productos__producto">
-                    <img src="/Project/assets/media/reino-papel-libro.jpg" alt="Reino de papel" class="productos__producto--img">
+                    <div class="img-producto">
+                        <img src="/Project/assets/media/reino-papel-libro.jpg" alt="Reino de papel" class="productos__producto--img">
+                    </div>
                     <div class="productos__producto--info">
                         <h4>Reino de papel</h4>
                         <h5>Victoria Resco</h5>
