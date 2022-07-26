@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar | Le Club</title>
+    <link rel="stylesheet" href="/assets/css/busqueda.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
+</head>
+<body>
+    <div class="overlay">
+        <div class="desplegable" id="desplegable">
+            <div class="x" id="x"><a href="javascript:cerrar()"><i class="fa-solid fa-xmark"></i></a></div>
+            <ul class="list">
+                <br>
+                <li class="list__item">
+                    <a href="/index.html">Inicio</a>
+                </li>
+                <hr noshade="" class="desplegable__hr">
+                <li class="list__item">
+                    <a href="#">Libros</a>
+                </li>
+                <li class="list__item">
+                    <a href="#">Música</a>
+                </li>
+                <hr noshade="" class="desplegable__hr">
+                <li class="list__item">
+                    <a href="#">Sobre Nosotros</a>
+                </li>
+                <li class="list__item">
+                    <a href="#">Políticas de Privacidad</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=5492616614848" class="btn-wsp" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i></a>
+    </div> -->
+
+    <header class="header">
+        <div class="container logo-nav-container">
+            <div style="z-index: 100;" id="logo"><img src="/assets/media/logo.png" alt="" class="logo"></div>
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <div class="bars" id="bars"><a href="javascript:abrir()"><i class="fa-solid fa-bars"></i></a></div>
+                    </li>
+                    <li>
+                        <div class="menu"><a href="#">Libros</a></div>
+                    </li>
+                    <li>
+                        <div class="menu"><a href="#">Música</a></div>
+                    </li>
+                    <li>
+                        <div class="glass" id="glass"><a href="javascript: abrirBuscar()"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li>
+                        <div class="buscarmobile">
+                            <div class="buscarmobile__arrow"><a href="javascript: cerrarBuscar()"><i class="fa-solid fa-arrow-left"></i></a></div>
+                            <input class="buscarmobile__input" type="text" placeholder="Buscar..." required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="search"><input class="input" type="text" placeholder="Buscar..." required></div>
+                    </li>
+                    <li>
+                        <div class="ingresar"><a href="#" class="button">Ingresar</a></div>
+                    </li>
+                    <li>
+                        <div class="cart" id="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="filtro">
+        <div class="container">
+            <div class="resultados">
+                <div class="resultados__categoria">
+                    <p>Inicio &#62; Resultado de Búsquedas</p><hr>
+                    <h3>Resultados para <strong>"amor"</strong></h3>
+                </div>
+            </div>
+            <div class="filtro">
+                <div class="filtro__filtrar">
+                    <a href="javascript: abrirModal()"><button class="button-filtrar" id="btn-filtrar"><div>Filtrar</div><i class="fa-solid fa-filter"></i></button></a>
+                    <div class="ocultar" id="ocultar">   
+                        <div class="filtros">
+                            <ul class="filtros-list">
+                                <div class="x-cerrar"><a href="javascript:cerrarModal()"><i class="fa-solid fa-xmark"></i></a></div>
+                                <h3>Filtrar por: </h3>
+                                <li class="filtros-list-item filtros-list-item-click">
+                                    <div class="filtros-list-button list-button-click">
+                                        <a href="#" class="filtros-list-link">Libros</a>
+                                        <div class="filtros-list-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                                    </div>
+                                    <ul class="list-show">
+                                        <li class="list-inside">Cómics</li>
+                                        <li class="list-inside">Crecimiento Personal</li>
+                                        <li class="list-inside">Divulgación general</li>
+                                        <li class="list-inside">Ficción</li>
+                                        <li class="list-inside">Juvenil</li>
+                                        <li class="list-inside">Infantil</li>
+                                        <li class="list-inside">No ficción</li>
+                                    </ul>
+                                </li>
+                                <li class="filtros-list-item filtros-list-item-click">
+                                    <div class="filtros-list-button list-button-click">
+                                        <a href="#" class="filtros-list-link">Música</a>
+                                        <div class="filtros-list-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                                    </div>
+                                    <ul class="list-show">
+                                        <li class="list-inside">Rock</li>
+                                        <li class="list-inside">Pop</li>
+                                        <li class="list-inside">Folclore</li>
+                                        <li class="list-inside">Clásica</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="filtro__ordenar">
+                    <a href=""><button class="button-filtrar"><div>Ordenar</div><i class="fa-solid fa-arrow-down-short-wide"></i></button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="overlay-filtros ocultar-filtros" id="overlay-filtros">
+        <section id="filtros">
+            <div class="container">
+                <div class="modal" id="modal">
+                    <div class="modal-container">
+                        <div class="filtros">
+                            <div class="x-modal" id="x"><a href="javascript:cerrarModal()"><i class="fa-solid fa-xmark"></i></a></div>
+                            <ul class="filtros-list">
+                                <h3>Filtrar por: </h3>
+                                <li class="filtros-list-item filtros-list-item-click">
+                                    <div class="filtros-list-button list-button-click">
+                                        <a href="#" class="filtros-list-link">Libros</a>
+                                        <div class="filtros-list-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                                    </div>
+                                    <ul class="list-show">
+                                        <li class="list-inside">Cómics</li>
+                                        <li class="list-inside">Crecimiento Personal</li>
+                                        <li class="list-inside">Divulgación general</li>
+                                        <li class="list-inside">Ficción</li>
+                                        <li class="list-inside">Juvenil</li>
+                                        <li class="list-inside">Infantil</li>
+                                        <li class="list-inside">No ficción</li>
+                                    </ul>
+                                </li>
+                                <li class="filtros-list-item filtros-list-item-click">
+                                    <div class="filtros-list-button list-button-click">
+                                        <a href="#" class="filtros-list-link">Música</a>
+                                        <div class="filtros-list-arrow"><i class="fa-solid fa-angle-right"></i></div>
+                                    </div>
+                                    <ul class="list-show">
+                                        <li class="list-inside">Rock</li>
+                                        <li class="list-inside">Pop</li>
+                                        <li class="list-inside">Folclore</li>
+                                        <li class="list-inside">Clásica</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="productos">
+        <div class="container">
+            <div class="productos">
+                <div class="productos__producto">
+                    <div class="img-producto">
+                        <img src="/assets/media/libro1.png" alt="Matar un reino" class="productos__producto--img">
+                    </div>
+                    <div class="productos__producto--info">
+                        <h4>Matar un reino</h4>
+                        <h5>Alexandra Christo</h5>
+                        <h3>$ 2.570</h3>
+                    </div>
+                </div>
+                <div class="productos__producto">
+                    <div class="img-producto">
+                        <img src="/assets/media/rayuela-libro.png" alt="Rayuela" class="productos__producto--img">
+                    </div>
+                    <div class="productos__producto--info">
+                        <h4>Rayuela</h4>
+                        <h5>Julio Cortázar</h5>
+                        <h3>$ 4.100</h3>
+                    </div>
+                </div>
+                <div class="productos__producto">
+                    <div class="img-producto">
+                        <img src="/assets/media/asesinato-libro.jpg" alt="Asesinato en el Orient Express" class="productos__producto--img">
+                    </div>
+                    <div class="productos__producto--info">
+                        <h4>Asesinato en el Orient Express</h4>
+                        <h5>Agatha Christie</h5>
+                        <h3>$ 1.250</h3>
+                    </div>
+                </div>
+                <div class="productos__producto">
+                    <div class="img-producto">
+                        <img src="/assets/media/ickabog-libro.jpg" alt="El Ickabog" class="productos__producto--img">
+                    </div>
+                    <div class="productos__producto--info">
+                        <h4>El Ickabog</h4>
+                        <h5>J. K. Rowling</h5>
+                        <h3>$ 5.800<h3>
+                    </div>
+                </div>
+                <div class="productos__producto">
+                    <div class="img-producto">
+                        <img src="/assets/media/filosofal-libro.webp" alt="Harry Potter y la piedra filosofal" class="productos__producto--img">                        
+                    </div>
+                    <div class="productos__producto--info">
+                        <h4>Harry Potter y la piedra filosofal</h4>
+                        <h5>J. K. Rowling</h5>
+                        <h3>$ 4.570</h3>
+                    </div>
+                </div>
+                <div class="productos__producto">
+                    <div class="img-producto">
+                        <img src="/assets/media/reino-papel-libro.jpg" alt="Reino de papel" class="productos__producto--img">
+                    </div>
+                    <div class="productos__producto--info">
+                        <h4>Reino de papel</h4>
+                        <h5>Victoria Resco</h5>
+                        <h3>$ 2.760</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="paginacion">
+        <div class="container">
+            <div class="paginacion">
+                <ul>
+                    <li><a href="#"><strong>1</strong></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <br>
+                <div class="footer__contacto">
+                    <h2>Contacto</h2>
+                    <hr>
+                    <hr>
+                    <p>Le Club<br>San Martín 950 (5500)<br>Mendoza, Argentina<br>Teléfono: <a
+                            href="tel:+54 261 574 1747">+54 261 574 1747</a><br>Email: <a
+                            href="mailto:ventas@leclublibrosymusica.com">ventas@leclublibrosymusica.com</a></p>
+                </div>
+                <div class="seguinos">
+                    <h2>Seguinos</h2>
+                    <hr>
+                    <hr>
+                    <div class="footer__redes">
+                        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><img
+                                src="/assets/media/instagram.png" alt="Instagram" class="footer__redes--img"></a>
+                        <img src="/assets/media/facebook.png" alt="Facebook" class="footer__redes--img">
+                        <img src="/assets/media/twitter.png" alt="Twitter" class="footer__redes--img">
+                    </div>
+                </div>
+                <div class="footer__leclub">
+                    <h2>Le Club</h2>
+                    <hr>
+                    <hr>
+                    <a href="#" target="_blank">Sobre Nosotros</a><br>
+                    <a href="#" target="_blank">Políticas de Privacidad</a>
+                </div>
+                <div class="footer__tarjetas">
+                    <img src="/assets/media/tarjetas.gif" alt="Tarjetas aceptadas" class="footer__tarjetas--img">
+                </div>
+                <hr>
+                <div class="copyright">
+                    <p style="font-size: 10px;">Copyright © 2022 Le Club ®</p><br>
+                </div>
+            </div>
+    </footer>
+
+    <script src="/assets/js/menu-desplegable.js"></script>
+    <script src="/assets/js/slider-frame.js"></script>
+    <script src="https://kit.fontawesome.com/359e1b0e60.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/filtros-list.js"></script>
+</body>
+</html>
