@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras | Le Club</title>
+    <link rel="stylesheet" href="/Project/assets/css/base.css">
+    <link rel="stylesheet" href="/Project/assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/Project/assets/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="overlay">
+        <div class="desplegable" id="desplegable">
+            <div class="x" id="x"><a href="javascript:cerrar()"><i class="fa-solid fa-xmark"></i></a></div>
+            <ul class="list">
+                <br>
+                <li class="list__item">
+                    <a href="/index.html">Inicio</a>
+                </li>
+                <hr noshade="" class="desplegable__hr">
+                <li class="list__item">
+                    <a href="#">Libros</a>
+                </li>
+                <li class="list__item">
+                    <a href="#">Música</a>
+                </li>
+                <hr noshade="" class="desplegable__hr">
+                <li class="list__item">
+                    <a href="#">Sobre Nosotros</a>
+                </li>
+                <li class="list__item">
+                    <a href="#">Políticas de Privacidad</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container logo-nav-container">
+            <div style="z-index: 100;" id="logo"><img src="/Project/assets/media/logo.png" alt="" class="logo"></div>
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <div class="bars" id="bars"><a href="javascript:abrir()"><i class="fa-solid fa-bars"></i></a></div>
+                    </li>
+                    <li>
+                        <div class="menu"><a href="#">Libros</a></div>
+                    </li>
+                    <li>
+                        <div class="menu"><a href="#">Música</a></div>
+                    </li>
+                    <li>
+                        <div class="glass" id="glass"><a href="javascript: abrirBuscar()"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li>
+                        <div class="buscarmobile">
+                            <div class="buscarmobile__arrow"><a href="javascript: cerrarBuscar()"><i class="fa-solid fa-arrow-left"></i></a></div>
+                            <input class="buscarmobile__input" type="text" placeholder="Buscar..." required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="search"><input class="input" type="text" placeholder="Buscar..." required></div>
+                    </li>
+                    <li>
+                        <div class="ingresar"><a href="#" class="button">Ingresar</a></div>
+                    </li>
+                    <li>
+                        <div class="cart" id="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="subheader">
+        <div class="container">
+            <div class="subheader">
+                <div class="subheader__volver">
+                    <a href="/index.html">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+                <h2 style="user-select: none">Carrito de compras (<span id="total-productos">0</span>)</h2>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <section id="seleccionar">
+        <div class="container">
+            <div class="seleccionar" id="seleccionar">
+                <div class="seleccionar__todo">
+                    <input type="checkbox" id="seleccionar-todo"><label for="seleccionar-todo" style="user-select: none">Seleccionar todo</label>
+                </div>
+                <div class="seleccionar__producto">
+                    <input type="checkbox" name="miCheckbox" id="miCheckbox">
+                    <div class="seleccionar__producto--img">
+                        <img src="/Project/assets/media/asesinato-libro.jpg" alt="Libro" class="img-producto">
+                    </div>
+                    <div class="seleccionar__producto--info">
+                        <div class="nombre-producto">
+                            <h3>Asesinato en el Orient Express</h3>
+                        </div>
+                        <div class="otros-datos">
+                            <div class="otros-datos__cantidad">
+                                <button class="button-cantidad" id="btn-cantidad"></button>
+                                    <div class="unidades number-input">
+                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
+                                        <input id="inputNumber" type="number" min="1" max="4" value="1">
+                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
+                                    </div>
+                                </button>
+                                <a href="#" id="eliminar" class="trash" style="margin-left: 1em;">Eliminar</a>
+                                <a href="#" id="comprar">Comprar ahora</a>
+                            </div>   
+                            <div class="otros-datos__precio">
+                                <span id="close">$ 1.250</span>
+                            </div>
+                        </div>
+                        <a href="#" class="trash"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="seleccionar__producto">
+                    <input type="checkbox" name="miCheckbox" id="miCheckbox">
+                    <div class="seleccionar__producto--img">
+                        <img src="/Project/assets/media/reino-papel-libro.jpg" alt="Libro" class="img-producto">
+                    </div>
+                    <div class="seleccionar__producto--info">
+                        <div class="nombre-producto">
+                            <h3>Asesinato en el Orient Express</h3>
+                        </div>
+                        <div class="otros-datos">
+                            <div class="otros-datos__cantidad">
+                                <div class="otros-datos__cantidad">
+                                    <button class="button-cantidad" id="btn-cantidad"></button>
+                                        <div class="unidades number-input">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
+                                            <input id="inputNumber" type="number" min="1" max="4" value="1">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
+                                        </div>
+                                    </button>
+                                    <a href="#" id="eliminar" class="trash" style="margin-left: 1em;">Eliminar</a>
+                                    <a href="#" id="comprar">Comprar ahora</a>
+                                </div>  
+                            </div>    
+                            <div class="otros-datos__precio">
+                                <span>$ 1.250</span>
+                            </div>
+                        </div>
+                        <a href="#" class="trash"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="seleccionar__producto">
+                    <input type="checkbox" name="miCheckbox" id="miCheckbox">
+                    <div class="seleccionar__producto--img">
+                        <img src="/Project/assets/media/reino-papel-libro.jpg" alt="Libro" class="img-producto">
+                    </div>
+                    <div class="seleccionar__producto--info">
+                        <div class="nombre-producto">
+                            <h3>Reino de papel</h3>
+                        </div>
+                        <div class="otros-datos">
+                            <div class="otros-datos__cantidad">
+                                <div class="otros-datos__cantidad">
+                                    <button class="button-cantidad" id="btn-cantidad"></button>
+                                        <div class="unidades number-input">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
+                                            <input id="inputNumber" type="number" min="1" max="4" value="1">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
+                                        </div>
+                                    </button>
+                                    <a href="#" id="eliminar" class="trash" style="margin-left: 1em;">Eliminar</a>
+                                    <a href="#" id="comprar">Comprar ahora</a>
+                                </div>  
+                            </div>       
+                            <div class="otros-datos__precio">
+                                <span>$ 2.760</span>
+                            </div>
+                        </div>
+                        <a href="#" class="trash"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="seleccionar__producto">
+                    <input type="checkbox" name="miCheckbox" id="miCheckbox">
+                    <div class="seleccionar__producto--img">
+                        <img src="/Project/assets/media/reino-papel-libro.jpg" alt="Libro" class="img-producto">
+                    </div>
+                    <div class="seleccionar__producto--info">
+                        <div class="nombre-producto">
+                            <h3>Reino de papel</h3>
+                        </div>
+                        <div class="otros-datos">
+                            <div class="otros-datos__cantidad">
+                                <div class="otros-datos__cantidad">
+                                    <button class="button-cantidad" id="btn-cantidad"></button>
+                                        <div class="unidades number-input">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
+                                            <input id="inputNumber" type="number" min="1" max="4" value="1">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
+                                        </div>
+                                    </button>
+                                    <a href="#" id="eliminar" class="trash" style="margin-left: 1em;">Eliminar</a>
+                                    <a href="#" id="comprar">Comprar ahora</a>
+                                </div>  
+                            </div>    
+                            <div class="otros-datos__precio">
+                                <span>$ 2.760</span>
+                            </div>
+                        </div>
+                        <a href="#" class="trash"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="seleccionar__producto">
+                    <input type="checkbox" name="miCheckbox" id="miCheckbox">
+                    <div class="seleccionar__producto--img">
+                        <img src="/Project/assets/media/reino-papel-libro.jpg" alt="Libro" class="img-producto">
+                    </div>
+                    <div class="seleccionar__producto--info">
+                        <div class="nombre-producto">
+                            <h3>Reino de papel</h3>
+                        </div>
+                        <div class="otros-datos">
+                            <div class="otros-datos__cantidad">
+                                <div class="otros-datos__cantidad">
+                                    <button class="button-cantidad" id="btn-cantidad"></button>
+                                        <div class="unidades number-input">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
+                                            <input id="inputNumber" type="number" min="1" max="4" value="1">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
+                                        </div>
+                                    </button>
+                                    <a href="#" id="eliminar" class="trash" style="margin-left: 1em;">Eliminar</a>
+                                    <a href="#" id="comprar">Comprar ahora</a>
+                                </div>  
+                            </div>     
+                            <div class="otros-datos__precio">
+                                <span>$ 2.760</span>
+                            </div>
+                        </div>
+                        <a href="#" class="trash"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="seleccionar__producto">
+                    <input type="checkbox" name="miCheckbox" id="miCheckbox">
+                    <div class="seleccionar__producto--img">
+                        <img src="/Project/assets/media/reino-papel-libro.jpg" alt="Libro" class="img-producto">
+                    </div>
+                    <div class="seleccionar__producto--info">
+                        <div class="nombre-producto">
+                            <h3>Reino de papel</h3>
+                        </div>
+                        <div class="otros-datos">
+                            <div class="otros-datos__cantidad">
+                                <div class="otros-datos__cantidad">
+                                    <button class="button-cantidad" id="btn-cantidad"></button>
+                                        <div class="unidades number-input">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
+                                            <input id="inputNumber" type="number" min="1" max="4" value="1">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
+                                        </div>
+                                    </button>
+                                    <a href="#" id="eliminar" class="trash" style="margin-left: 1em;">Eliminar</a>
+                                    <a href="#" id="comprar">Comprar ahora</a>
+                                </div>  
+                            </div>     
+                            <div class="otros-datos__precio">
+                                <span>$ 2.760</span>
+                            </div>
+                        </div>
+                        <a href="#" class="trash"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="subtotal">
+        <div class="container-subtotal">
+            <div class="subtotal">
+                <div class="subtotal__precio">
+                    <h4>Total</h4>
+                    <div id="total-precio">$ 0</div>
+                </div>
+                <div class="subtotal__continuar">
+                    <button class="subtotal__continuar--btn">Continuar compra</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/Project/assets/js/menu-desplegable.js"></script>
+    <script src="https://kit.fontawesome.com/359e1b0e60.js" crossorigin="anonymous"></script>
+    <script src="/Project/assets/js/unidades.js"></script>
+</body>
+</html>
