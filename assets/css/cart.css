@@ -187,13 +187,13 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: center;
     color: rgba(0, 0, 0, 0.336);
     transition: all ease .5s;
+    user-select: none;
 }
 
 .number-input button:hover {
     color: rgb(0, 0, 0);
 
 }
-
 
 .number-input input[type=number] {
     outline: none;
@@ -341,7 +341,7 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
-/* PRUEBA EH */
+/* INPUT */
 
 input[type="number"] {
     caret-color: transparent;
@@ -356,6 +356,40 @@ input[type="number"]::after {
 
 #eliminar, #comprar {
     display: none;
+}
+
+@media screen and (max-width: 719px) {
+    /* Seleccionar producto */
+
+    .nombre-producto {
+        font-size: 15px;
+    }
+
+    .otros-datos__precio {
+        font-size: 21px;
+    }
+
+    /* Input number */
+    
+    .number-input button {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    
+    .number-input button:hover {
+        color: rgb(0, 0, 0);
+    }
+    
+    .number-input input[type=number] {
+        outline: none;
+        font-family: sans-serif;
+        min-width: 2em;
+        max-width: 3em;
+        padding: .5rem;
+        font-size: 15px;
+        height: 1.6em;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 720px) and (max-width: 985px) {
@@ -482,45 +516,3 @@ input[type="number"]::after {
         margin-top: .2em;
     }
 }
-
-/* @media screen and (min-width: 1024px){
-    .trash .fa-solid {
-        display: none;
-    }
-
-    /* Subtotal */
-/*
-    .subtotal {
-        width: 85%;
-        max-width: 1400px;
-        margin: auto;
-        position: sticky;
-        display: inline-flex;
-        align-items: center;
-        justify-content: end;
-    }
-
-    .subtotal__precio {
-        margin-right: 3em;
-    }
-
-    .subtotal__precio h4 {
-        font-size: 26px;
-        margin-right: .5em;
-    }
-
-    .subtotal__precio #total-precio {
-        font-size: 26px;
-    }
-
-    /* .subtotal__continuar {
-        display: flex;
-        justify-content: end;
-    }
-
-    .subtotal__continuar--btn {
-        width: 40%;
-        font-size: 1.3em;
-        border-radius: .5em;
-    } */
-/*}
