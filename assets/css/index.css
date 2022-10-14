@@ -6,7 +6,8 @@
     --bg-color-2: hsl(87, 100%, 67%);
     --bg-color-3: hsl(120, 100%, 50%);
     --bg-color-4: hsl(87, 96%, 59%);
-    --button: hsl(87, 54%, 51%);
+    --button: hsl(120, 77%, 44%);
+    --button-hover: hsl(120, 77%, 50%);
     --text-color-1: hsl(0, 0%, 0%);
     --text-color-2: rgb(53, 168, 53);
     --text-color-3: hsl(0, 0%, 12%);
@@ -68,10 +69,12 @@ button {
     border: none;
     border-radius: 1em;
     text-align: center;
+    transition: all .55s ease;
 }
 
 .button:hover {
     box-shadow: 5px solid var(--bg-color-3);
+    background-color: var(--button-hover);
 }
 
 .input {
@@ -167,21 +170,57 @@ button {
     display: none;
 }
 
-.buscarmobile__input {
+.buscarmobile__input{
+    overflow: hidden;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+  
+.buscarmobile__input input#search{
+    height: 50px;
+    border: rgb(214, 214, 214) 1px solid;
+    font-size: 16px;
+    float: left;
+    color: rgb(0, 0, 0);
     padding: .5em .9em;
     padding-left: 3em;
-    font-size: 1em;
-    color: grey;
-    border: 1px solid grey;
-    border-radius: 1.5em;
-    width: 54vw;
+    padding-right: 60px;
+    border-radius: 15px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     outline: none;
-    transition: .2s ease all;
+    width: 54vw;
+}
+
+.buscarmobile__input input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+
+.buscarmobile__input button.icon{
+    border-radius: 50%;
+    border: none;
+    background: #1AC71A;
+    height: 50px;
+    width: 50px;
+    color: #ffffff;
+    opacity: 0;
+    font-size: 10pt;
+    transition: all .55s ease;
+}
+
+.buscarmobile__input button.icon {
+    outline: none;
+    opacity: 1;
+    margin-left: -50px;
+}
+
+.buscarmobile__input:hover button.icon:hover{
+    background-color: hsl(120, 77%, 50%);
 }
 
 .buscarmobile__arrow {
     position: absolute;
-    margin-top: .35em;
+    margin-top: .75em;
     margin-left: .5em;
 }
 
@@ -214,7 +253,7 @@ button {
     left: 0;
     right: 0;
     display: none;
-    z-index: 150;
+    z-index: 2000;
     backdrop-filter: blur(5px);
 }
 
@@ -256,6 +295,12 @@ button {
 
 .list__item--click{
     cursor: pointer;
+}
+
+/* Tu cuenta desplegable */
+
+.display_flex {
+    display: flex;
 }
 
 /* Slider */
@@ -473,6 +518,62 @@ footer h2 {
     width: 100%;
 }
 
+/* Buscar de index */
+
+.search{
+    overflow: hidden;
+    width: 100%;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+  
+.search input#search{
+    height: 50px;
+    border: rgb(214, 214, 214) 1px solid;
+    font-size: 16px;
+    float: left;
+    color: rgb(0, 0, 0);
+    padding-left: 15px;
+    padding-right: 60px;
+    border-radius: 15px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    outline: none;
+}
+
+.search input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.search button.icon{
+    border-radius: 50%;
+    border: none;
+    background: #1AC71A;
+    height: 50px;
+    width: 50px;
+    color: #ffffff;
+    opacity: 0;
+    font-size: 10pt;
+    transition: all .55s ease;
+}
+
+.search button.icon {
+    outline: none;
+    opacity: 1;
+    margin-left: -50px;
+}
+
+.search:hover button.icon:hover{
+    background-color: hsl(120, 77%, 50%);
+}
+
 @media screen and (max-width: 320px) {
     /* Header input buscar desplegable */
 
@@ -595,15 +696,9 @@ footer h2 {
         
     .buscarmobile__input {
         width: 100%;
-        margin: 1.51em 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-right: 10em;
-    }
-
-    .buscarmobile__arrow {
-        margin-top: 1.8em;
     }
 
     /* Lecturas recomendadas y Nuestros destacados */
@@ -730,17 +825,23 @@ footer h2 {
 }
 
 @media screen and (max-width: 850px) {
-        /* Header */
-        .bars, .glass {
-            display: inline-block;
-        }
-        .menu, .search, .ingresar {
-            display: none;
-            visibility: hidden;
-        }
-        .navigation ul li { 
-            padding-right: 0;
-        }
+    /* Header */
+    .bars, .glass {
+        display: inline-block;
+    }
+    .menu, .search, .ingresar {
+        display: none;
+        visibility: hidden;
+    }
+    .navigation ul li { 
+        padding-right: 0;
+    }
+}
+
+@media screen and (min-width: 851px) {
+    .buscarmobile__input input#search, .buscarmobile__arrow {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1327px) {
