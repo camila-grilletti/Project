@@ -8,6 +8,7 @@
     <title>Le Club</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <link rel="icon" href="/assets/media/logo.png">
 </head>
 
 <body>
@@ -33,6 +34,13 @@
                 <li class="list__item">
                     <a href="#">Políticas de Privacidad</a>
                 </li>
+                <hr noshade="" class="desplegable__hr">
+                <!-- <li class="list__item">
+                    <a href="assets/pages/ingresar.html">Ingresar</a>
+                </li> -->
+                <li class="list__item">
+                    <a href="assets/pages/ingresar.html" class="display_flex"><i class="fa-solid fa-user"></i><span>Tu cuenta</span></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -44,7 +52,7 @@
 
     <header class="header">
         <div class="container logo-nav-container">
-            <div style="z-index: 100;" id="logo"><img src="assets/media/logo.png" alt="" class="logo"></div>
+            <div style="z-index: 100;" id="logo"><a href="/index.html"><img src="assets/media/logo.png" alt="Le Club. Libros y música" class="logo"></a></div>
             <nav class="navigation">
                 <ul>
                     <li>
@@ -62,14 +70,20 @@
                     <li>
                         <div class="buscarmobile">
                             <div class="buscarmobile__arrow"><a href="javascript: cerrarBuscar()"><i class="fa-solid fa-arrow-left"></i></a></div>
-                            <input class="buscarmobile__input" type="text" placeholder="Buscar..." required>
+                            <div class="buscarmobile__input">
+                                <input type="search" id="search" placeholder="Buscar..." spellcheck="false"/>
+                                <button class="icon" id="iconS"><i class="fa fa-search"></i></button>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <div class="search"><input class="input" type="text" placeholder="Buscar..." required></div>
+                        <div class="search" id="search2">
+                            <input type="search" id="search" class="input" placeholder="Buscar..." spellcheck="false"/>
+                            <button class="icon" id="iconS" onclick="busqueda()"><i class="fa fa-search"></i></button>
+                        </div>
                     </li>
                     <li>
-                        <div class="ingresar"><a href="#" class="button">Ingresar</a></div>
+                        <div class="ingresar"><a href="assets/pages/ingresar.html" class="button">Ingresar</a></div>
                     </li>
                     <li>
                         <div class="cart" id="cart"><a href="assets/pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
@@ -116,11 +130,11 @@
             <hr><hr>
             <div class="publicaciones">
                 <div class="publicacion">
-                    <a href="assets/pages/product.html"><a href="assets/pages/product.html"><img src="assets/media/libro1.png" alt="Libro 1" class="publicacion__img">
+                    <a href="/assets/pages/product.html"><img src="assets/media/libro1.png" alt="Libro 1" class="publicacion__img">
                         <h4>Matar un reino</h4>
                         <h5>Alexandra Christo</h5>
                         <hr>
-                        <h3>$ 2800</h3></a></a>
+                        <h3>$ 2800</h3></a>
                 </div>
                 <div class="publicacion">
                     <img src="assets/media/libro2.jpg" alt="Libro 2" class="publicacion__img">
@@ -179,7 +193,7 @@
                 </div>
                 <div class="publicacion">
                     <img src="assets/media/cd2.jpg" alt="CD 2" class="publicacion__img">
-                    <h4>Blue & Lonesome y la vanda de otros </h4>
+                    <h4>Blue & Lonesome y la banda de otros </h4>
                     <h5>The Rolling Stones</h5>
                     <hr>
                     <h3>$ 9760</h3>
@@ -287,6 +301,7 @@
     
     <script src="assets/js/slider-frame.js"></script>
     <script src="assets/js/menu-desplegable.js"></script>
+    <script src="/assets/js/busqueda.js"></script>
 </body>
 
 </html>
